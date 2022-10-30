@@ -1,0 +1,70 @@
+---
+layout: default
+---
+<div class="fluid-container">
+  <div class="home">
+    {%- if page.title -%}
+      <h1 class="page-heading">{{ page.title }}</h1>
+    {%- endif -%}
+  
+    <div id="page-hero" class="mb-1">
+      <h1>Programming Mastery</h1>
+      <span style="display:block"> A set of tutorial to help you master the art of programming</span>
+    </div>
+    
+  
+    {%- if site.posts.size > 0 -%}
+      <h2 class="post-list-heading mb-1">{{ page.list_title | default: "Tutorials" }}</h2>
+      <article id="home-content">
+        <div class="post-list">
+          {%- for post in site.posts -%}
+          <div class="post mb-1  p-2">
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            {%- if post.image-url -%}
+              <img src="{{post.image-url}}" alt="" >
+            {%- endif -%}
+            <div class="post-meta mt-1">
+              <span class="post-tags">
+                {{ post.date | date: date_format }}
+              </span>
+              {%- for tags in post.tags-%}
+              <span class="post-tags">
+                {{ tags }}
+              </span>
+              {%- endfor -%}
+            </div>
+            <h3>
+              <a class="post-link mt-1" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+            {%- if site.show_excerpts -%}
+              {{ post.excerpt }}
+            {%- endif -%}
+            
+          </div>
+          {%- endfor -%}
+        </div>
+        <div id="creator-presentation" class="p-1">
+          <div>
+            <h3>
+              About Me
+            </h3>
+            <div>
+              <img src="https://avatars.githubusercontent.com/u/20192434?v=4" alt="">
+            </div>
+          </div>
+          
+          <p class="mt-1 p-1">
+            Hey , there my name is <b>Emmanuel N’goran</b> , 
+            I am a passinate software analyst and researcher 
+            currently living in Canada
+          </p>
+        </div>
+      </article>
+      
+  
+      
+    {%- endif -%}
+  </div>
+</div>
