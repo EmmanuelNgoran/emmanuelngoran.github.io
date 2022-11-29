@@ -3,7 +3,7 @@ layout: post
 title:  "Welcome to Jekyll!"
 date:   2022-09-27 20:21:09 -0400
 categories: jekyll update
-image-url: https://images.pexels.com/photos/1193743/pexels-photo-1193743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+image-url: assets/pexels-photo.jpeg
 tags: python beginner newbies
 ---
 

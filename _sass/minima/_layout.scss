@@ -30,7 +30,7 @@
   margin-bottom: 0;
   float: left;
   color:$site-text-color;
-  font-family: Iceland;
+  font-family: $title-font;
   
 
   &,
@@ -47,6 +47,10 @@
 #page-hero{
   text-align: center;
   margin-bottom: 10px;
+  >h1{
+    font-family: $title-font;
+  }
+  
 }
 
 #home-content{
@@ -57,7 +61,7 @@
   @include media-query($on-palm) {
     flex-direction: column;
     padding-right: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+    
   }
   
 }
@@ -69,11 +73,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap:5px;
+
+  
 
   @include media-query($on-palm) {
     flex-direction: row;
     width: 100%;
-    justify-content: space-between;
+    > div , p{
+      width:50%;
+    }
   }
 }
 
@@ -102,10 +111,11 @@
 
 
   @include media-query($on-palm) {
+   
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
-    background-color: $background-color;
+    background-color: $nav-background-color;
     border: 1px solid $grey-color-light;
     border-radius: 5px;
     text-align: right;
@@ -129,7 +139,7 @@
       text-align: center;
 
       > svg {
-        fill: $grey-color-dark;
+        fill: $header-text-color;
       }
     }
 
@@ -180,6 +190,7 @@
   margin-left: 8px;
   border-radius: 4px;
   text-align: center;
+  line-height: 4;
 }
 
 
