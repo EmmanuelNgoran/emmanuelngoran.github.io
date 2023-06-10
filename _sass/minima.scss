@@ -20,8 +20,10 @@ $nav-background-color:#132C40 !default;
 $site-text-color:#FFB443 !default;
 $header-font-family: Iceland;
 
+//post
 $post-background-color:#FEFEFE;
 $post-tags-color:#F2F2F2;
+$post-date-tags-color: rgb(43, 60, 146);
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
@@ -58,5 +60,7 @@ $title-font: Iceland;
 @import
   "minima/base",
   "minima/layout",
-  "minima/syntax-highlighting"
+  "minima/syntax-highlighting",
+  "minima/home",
+  "minima/posts"
 ;
