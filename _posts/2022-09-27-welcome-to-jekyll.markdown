@@ -20,10 +20,8 @@ Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit number
 Jekyll also offers powerful support for code snippets:
 
 {% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
+def load_hello(file_name):
+    hello
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 

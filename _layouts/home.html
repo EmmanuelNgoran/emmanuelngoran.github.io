@@ -19,7 +19,7 @@ title: Blog
     <article id="home-content">
       <div class="post-list">
         {%- for post in site.posts -%}
-        <div class="post mb-1  p-2">
+        <div class="post mb-1  p-1">
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
           <div class="post-image">
             {%- if post.image-url -%}
